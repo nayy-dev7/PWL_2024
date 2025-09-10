@@ -71,6 +71,18 @@ Route::resource('photos', PhotoController::class)->except([
 'create', 'store', 'update', 'destroy' 
 ]);
 
+
+// no.1 prak 3
+// Route::get('/greeting', function () { 
+//     return view('hello', ['name' => 'Naya']); 
+// });
+// no.2 prak 3
+// Route::get('/greeting', function () { 
+//     return view('blog.hello', ['name' => 'Naya']); 
+// });
+// no.3 prak 3
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
